@@ -19,9 +19,11 @@ const CONNECTION_URL =
   "mongodb+srv://js_mastery:M6WfDnJEoj9HkV2d@practice.jto9p.mongodb.net/memories_app?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 5000;
 const localuri = "mongodb://localhost:27017/memories_app";
+const cloudUrl = `mongodb+srv://kabir:kabir123@cluster0.gv5df.mongodb.net/memories_app?retryWrites=true&w=majority`
+
 
 mongoose
-  .connect(localuri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(cloudUrl, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() =>
     app.listen(PORT, () =>
       console.log(`Server Running on Port: http://localhost:${PORT}`)
